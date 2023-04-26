@@ -14,7 +14,8 @@
         <link rel="stylesheet" href="{% static 'uikit/styles/uikit.css' %}" />
         <!-- Dev Search UI -->
         <link rel="stylesheet" href="{% static 'styles/app.css' %}" />
-      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+
         <title>farouk-platform - Connect with Developers!</title>
         
     </head>
@@ -22,18 +23,30 @@
 
         {% include 'navbar.html' %}
         
-    {% if messages %}
+    <!--{% if messages %}
      <ul class="messages">
         {% for message in messages %}
         <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
         {% endfor %}
-     </ul>
+    </ul>
+    {% endif %}-->
+
+    {% if messages %}
+     {% for message in messages %}
+       <div class="alert alert--{{message.tags}}">
+        <p class="alert__message">{{message}}</p>
+        <button class="alert__close">⨯</button>
+       </div>
+     {% endfor %}
+
     {% endif %}
 
         {% block content %}
             
         {% endblock content %}
 
+        <script src="{% static 'uikit/app.js' %}"></script>
         
     </body>
+    
 </html>
