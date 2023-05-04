@@ -3,7 +3,8 @@
 }
 
 .btn--sub {
-  background-color: var(--color-sub-light);
+  /*var(--color-sub-light);*/
+  background-color: gray;
 }
 
 .card {
@@ -13,9 +14,14 @@
 img {
   width: 100%;
 }
-
-.tag > i.im {
+/*
+.tag > i.fa {
   font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+*/
+.dev__social a i.fab {
+  font-size: 2.8rem;
   margin-right: 0.5rem;
 }
 
@@ -91,7 +97,8 @@ img {
     right: 2.75rem;
     cursor: pointer;
     padding: 1rem;
-    background: var(--color-sub-light);
+    /*var(--color-sub-light);*/
+    background: red;
     z-index: 999;
     font-size: 0;
     width: 5rem;
@@ -111,7 +118,8 @@ img {
     top: 4rem;
     right: 4rem;
     z-index: 999;
-    background: var(--color-light);
+    /*var(--color-light);*/
+    background: yellow;
     transition: all 0.3s ease-in-out;
   }
 
@@ -149,8 +157,10 @@ img {
     left: 0;
     bottom: 0;
     right: 0;
-    background: var(--color-sub);
+    /*var(--color-sub);*/
+    background: pink;
     transition: all 0.5s ease-in-out;
+
   }
 
   .header__menuItem a {
@@ -161,7 +171,8 @@ img {
   .header__menuItem a:hover {
     padding: 1rem 3rem;
     border-radius: 3px;
-    background: var(--color-sub-light);
+  
+    background:var(--color-sub-light);
   }
 }
 
@@ -844,4 +855,40 @@ img {
   color: var(--color-sub);
   margin-bottom: 1rem;
   margin-top: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+:root {
+  --color-primary: #3f51b5; /*change to your desired primary color*/
+  --color-light: #ffffff;
+}
+
+.header {
+  background-color: var(--color-primary);
+  color: var(--color-light);
+}
+
+.header__nav > ul {
+  
+  --color-primary: #3f51b5; /*change to your desired primary color*/
+  --color-light: #ffffff;
+  
+}
+
+.toggle-menu__lines {
+  background-color: var(--color-light); /*change toggle button color*/
+}
+
+.hero-section {
+  background-color: var(--color-primary);
+  color: var(--color-light);
 }
