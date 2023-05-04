@@ -24,6 +24,10 @@ img {
   font-size: 2.8rem;
   margin-right: 0.5rem;
 }
+.dev__social a.dev__social-globe i.fas {
+  font-size: 2.8rem;
+  margin-right: 0.5rem;
+}
 
 .content-box {
   width: 95%;
