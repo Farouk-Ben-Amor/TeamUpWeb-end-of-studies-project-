@@ -54,7 +54,8 @@ img {
 }
 
 .header__logo > img {
-	height: 3.8rem;
+	height: 69px;
+	/*height: 3.8rem;*/
 }
 
 .header__nav > ul {
@@ -104,7 +105,8 @@ img {
 		cursor: pointer;
 		padding: 1rem;
 		/*var(--color-sub-light);*/
-		background: red;
+		background: gray;
+		/*red*/
 		z-index: 999;
 		font-size: 0;
 		width: 5rem;
@@ -125,7 +127,8 @@ img {
 		right: 4rem;
 		z-index: 999;
 		/*var(--color-light);*/
-		background: yellow;
+		background: white;
+		/*yellow*/
 		transition: all 0.3s ease-in-out;
 	}
 
@@ -173,7 +176,8 @@ img {
 		bottom: 0;
 		right: 0;
 		/*var(--color-sub);*/
-		background: pink;
+		background: rgb(52, 52, 192);
+		/*pink */
 		transition: all 0.5s ease-in-out;
 	}
 
