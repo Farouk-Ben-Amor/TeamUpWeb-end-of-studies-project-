@@ -345,7 +345,7 @@ img {
 }
 
 .pagination .btn.btn--sub {
-  color: var(--color-light);
+	color: var(--color-light);
 }
 
 /*=======================
