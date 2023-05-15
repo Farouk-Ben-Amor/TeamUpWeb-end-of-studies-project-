@@ -40,5 +40,4 @@ def searchProfiles(request):
        Q(short_intro__icontains = search_query) |
        Q(skill__in = skills)
        )
-
     return profiles, search_query
