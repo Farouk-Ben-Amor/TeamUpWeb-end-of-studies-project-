@@ -17,7 +17,7 @@ class  CustomUserCreationForm(UserCreationForm):
             field.widget.attrs.update({'class': 'input'})
 class ProfileForm(ModelForm):
     class Meta:
-        model=Profile
+        model= Profile
         fields=['name','email','username','location','bio','short_intro','profile_image','social_github',
                 'social_linkedin','social_twitter','social_youtube','social_website']
     

@@ -50,7 +50,7 @@ def registerUser(request):
           login(request,user)
           return redirect(('edit-account'))
        else:
-          messages.success(request,'An error has occurred during registration!')
+          messages.alert(request,'An error has occurred during registration!')
     context = {'page':page,'form':form}
     return render(request,'users/login_register.html',context)
 
@@ -150,6 +150,7 @@ def viewMessage(request, pk):
    context = {'message' : message }
    return render(request,'users/message.html', context)
 
+@login_required(login_url='login')
 def createMessage(request, pk):
    recipient = Profile.objects.get(id = pk)
    form = MessageForm()
