@@ -1,6 +1,5 @@
-<!-- @format -->
-
-{% extends 'main.html' %} {% block content %}
+{% extends 'main.html' %}
+{% block content %}
 
 <!-- Main Section -->
 <main class="formPage my-xl">
@@ -25,6 +24,18 @@
 					{{field}}
 				</div>
 				{% endfor %}
+				<div class="form__field">
+					{% for tag in project.tags.all %}
+					<div
+						class="project-tag tag tag--pill tag--main"
+						data-tag="{{ tag.id }}"
+						data-project="{{ project.id }}">
+						{{tag.name}} &#215;
+					</div>
+
+					{% endfor %}
+				</div>
+
 				<br />
 				<div class="form__field">
 					<label for="formInput#text">Tags</label>
@@ -41,5 +52,4 @@
 		</div>
 	</div>
 </main>
-
 {% endblock %}
