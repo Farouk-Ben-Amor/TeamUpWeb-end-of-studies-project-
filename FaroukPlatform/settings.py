@@ -1,7 +1,7 @@
 from pathlib import Path
 import os
 from datetime import timedelta
-
+import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -15,7 +15,8 @@ SECRET_KEY = 'django-insecure-6j*o+(0aa6a-zwa96ql3t#sq472qmni^fz)dpkcj)(%=m(@j&2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app' , '.now.sh']
+ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ['.vercel.app' , '.now.sh']
 
 
 # Application definition
@@ -124,16 +125,19 @@ WSGI_APPLICATION = 'FaroukPlatform.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'teamupweb',
-        'USER': 'postgres',
-        'PASSWORD': 'farouk1919',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
+    'default':dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'teamupweb',
+#         'USER': 'postgres',
+#         'PASSWORD': 'farouk1919',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
 
 
 
