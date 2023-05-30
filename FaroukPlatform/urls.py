@@ -27,6 +27,8 @@ urlpatterns = [
 ]
 urlpatterns += static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)
 urlpatterns += static(settings.STATIC_URL,document_root = settings.STATIC_ROOT)
+
+#added for render deploy
 urlpatterns +=staticfiles_urlpatterns()
 # 1 - User submits email for reset              //PasswordResetView.as_view()           //name="reset_password"
 # 2 - Email sent message                        //PasswordResetDoneView.as_view()        //name="passsword_reset_done"
